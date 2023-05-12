@@ -53,6 +53,14 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ## 1.3
 
+```shell
+docker build -t testapp .
+docker run -d -p 8080:80 --name nginxtest testapp
 
+```
 
+```
+docker stop nginxtest
+docker rm nginxtest
+```
  # Część 2 (Dodatkowa)
