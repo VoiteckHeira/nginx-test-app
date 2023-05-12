@@ -3,10 +3,11 @@
 
 # Część 1 (Obowiązkowa)
 ## 1.1
+<b>Widok strony</b>
+![image](https://github.com/VoiteckHeira/nginx-test-app/assets/91530837/e7aa46af-c865-4613-9683-e72f82de42d8)
 
-'''
 
-'''
+
 ## 1.2
 
 ``` Dockerfile
@@ -54,13 +55,16 @@ CMD ["nginx", "-g", "daemon off;"]
 ## 1.3
 
 ```shell
-docker build -t testapp .
-docker run -d -p 8080:80 --name nginxtest testapp
-
+docker build --build-arg VERSION=1.1 -t tchzad1:v1 .
+```
+```shell
+docker run -d -p 8080:80 --name zad1cz1 tchzad1:v1
 ```
 
+```shell
+docker stop zad1cz1
 ```
-docker stop nginxtest
-docker rm nginxtest
+```shell
+docker rm zad1cz1
 ```
  # Część 2 (Dodatkowa)
