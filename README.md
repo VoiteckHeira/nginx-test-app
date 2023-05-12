@@ -82,4 +82,6 @@ docker rm zad1cz1
 ```
  # Część 2 (Dodatkowa)
  
+ buildctl build --frontend=dockerfile.v0 --local context=. --local dockerfile=. --export-cache type=inline --output=type=image,name=docker.io/voiteckheir/tch-zadanie1:v2cashe,push=true
+ 
  docker buildx build --build-arg BUILDKIT_MULTI_PLATFORM=1 --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --build-arg VERSION=1.1 --push -t tchzad1:v1 .
