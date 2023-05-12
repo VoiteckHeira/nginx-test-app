@@ -5,3 +5,4 @@ docker run -d -p 8080:80 --name zad1cz1 tchzad1:v1
 docker stop zad1cz1
 docker rm zad1cz1
 
+buildctl build --frontend=dockerfile.v0 --local context=. --local dockerfile=. --export-cache type=inline --output=type=image,name=docker.io/voiteckheir/tch-zadanie1:v2cashe,push=true
