@@ -9,7 +9,7 @@
 '''
 ## 1.2
 
-'''
+```
 # syntax=docker/dockerfile:1.4
 
 FROM --platform=$BUILDPLATFORM node:alpine3.16 as build-stage 
@@ -49,7 +49,7 @@ HEALTHCHECK --interval=10s --timeout=1s \
 
 CMD ["nginx", "-g", "daemon off;"]
 
-'''
+```
 
 ## 1.3
 
