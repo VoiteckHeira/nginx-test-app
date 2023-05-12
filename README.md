@@ -9,7 +9,7 @@
 '''
 ## 1.2
 
-```
+``` Dockerfile
 # syntax=docker/dockerfile:1.4
 
 FROM --platform=$BUILDPLATFORM node:alpine3.16 as build-stage 
