@@ -13,11 +13,9 @@
 ``` Dockerfile
 # syntax=docker/dockerfile:1.4
 
-FROM --platform=$BUILDPLATFORM node:alpine3.16 as build-stage 
+FROM  node:alpine3.16 as build-stage 
 
 ARG VERSION
-ARG TARGETPLATFORM
-ARG BUILDPLATFORM
 
 WORKDIR /app 
 
@@ -57,10 +55,25 @@ CMD ["nginx", "-g", "daemon off;"]
 ```shell
 docker build --build-arg VERSION=1.1 -t tchzad1:v1 .
 ```
+![image](https://github.com/VoiteckHeira/nginx-test-app/assets/91530837/e191f375-1057-41c6-91e2-5bac96c1b38b)
+
 ```shell
 docker run -d -p 8080:80 --name zad1cz1 tchzad1:v1
 ```
+![image](https://github.com/VoiteckHeira/nginx-test-app/assets/91530837/a99a81bb-dc87-48fe-a8ce-cdad64dff36c)
 
+```shell
+docker history tchzad1:v1
+```
+![image](https://github.com/VoiteckHeira/nginx-test-app/assets/91530837/784808cd-6a4b-4be2-8bac-370269547833)
+
+```shell
+docker logs zad1cz1
+```
+![image](https://github.com/VoiteckHeira/nginx-test-app/assets/91530837/b8005570-61fb-438f-93a2-25fc2de3bef2)
+
+
+<i>Ewentualne komendy do spokojnego zastopowania i usunięcia kontenera</i>
 ```shell
 docker stop zad1cz1
 ```
