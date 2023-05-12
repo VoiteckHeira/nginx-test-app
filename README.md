@@ -81,3 +81,5 @@ docker stop zad1cz1
 docker rm zad1cz1
 ```
  # Część 2 (Dodatkowa)
+ 
+ docker buildx build --build-arg BUILDKIT_MULTI_PLATFORM=1 --platform linux/arm/v7,linux/arm64/v8,linux/amd64 --build-arg VERSION=1.1 --push -t tchzad1:v1 .
